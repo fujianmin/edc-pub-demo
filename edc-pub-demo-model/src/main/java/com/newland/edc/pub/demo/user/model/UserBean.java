@@ -3,6 +3,7 @@ package com.newland.edc.pub.demo.user.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.newland.edc.pub.demo.user.BaseBean;
+import org.hibernate.validator.constraints.NotBlank;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class UserBean extends BaseBean implements Serializable {
      * 机构ID
      */
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
+    @NotBlank(message = "用户归属机构不能为空")
     private String orgId;
 
     /**
@@ -34,6 +36,7 @@ public class UserBean extends BaseBean implements Serializable {
      * 用户归属
      */
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
+    @NotBlank(message = "用户归属区域不能为空")
     private String regionId;
 
     /**
@@ -52,12 +55,14 @@ public class UserBean extends BaseBean implements Serializable {
      * 用户姓名
      */
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
+    @NotBlank(message = "用户姓名不能为空")
     private String userName;
 
     /**
      * 用户密码
      */
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
+    @NotBlank(message = "用户密码不能为空")
     private String passwd;
 
     /**
@@ -108,6 +113,7 @@ public class UserBean extends BaseBean implements Serializable {
      * 创建工号
      */
     @JsonInclude(value = JsonInclude.Include.NON_NULL)
+    @NotBlank(message = "创建用户不能为空")
     private String createUser;
 
     /**
