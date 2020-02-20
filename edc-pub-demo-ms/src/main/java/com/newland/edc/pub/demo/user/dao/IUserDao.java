@@ -1,8 +1,7 @@
 package com.newland.edc.pub.demo.user.dao;
 
+import com.newland.bd.ms.core.model.RespInfo;
 import com.newland.edc.pub.demo.user.model.UserBean;
-
-import java.util.List;
 
 /**
  * @author fujm
@@ -13,7 +12,7 @@ public interface IUserDao {
      * 查询用户信息
      *
      * @param userBean 请求BEAN
-     * @return
+     * @return 返回对象
      */
-    List<UserBean> qryUserInfo(UserBean userBean);
+    RespInfo qryUserInfo(UserBean userBean);
 }

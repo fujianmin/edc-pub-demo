@@ -11,4 +11,9 @@ public final class Constants {
      * 数据库类型
      */
     public static final String DB_TYPE = MutilDataSourceUtils.getCurrentDaoInfo().getDbType().toString();
+
+    /**
+     * 默认失效时间
+     */
+    public static final String DEFAULT_EXPIRE_TIME = "2099-12-31 00:00:00";
 }

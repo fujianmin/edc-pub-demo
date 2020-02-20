@@ -26,8 +26,6 @@ public class UserService {
      * @return 返回对象
      */
     public RespInfo qryUserInfo(UserBean userBean) {
-
-        return new RespInfo();
+        return this.userFacadeDao.getBaseDao().qryUserInfo(userBean);
     }
-
 }
