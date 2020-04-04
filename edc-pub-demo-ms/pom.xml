@@ -40,6 +40,12 @@
             <artifactId>edc-pub-demo-model</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.newland.bd.udap</groupId>
+            <artifactId>ng-udap-common-module</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- commons -->
         <dependency>

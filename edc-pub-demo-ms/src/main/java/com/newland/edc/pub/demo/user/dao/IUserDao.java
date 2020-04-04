@@ -35,7 +35,7 @@ public interface IUserDao {
     /**
      * 删除用户
      *
-     * @param userBean
+     * @param userBeanList
      */
     void deleteUser(List<UserBean> userBeanList);
 }

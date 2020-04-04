@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -128,7 +129,7 @@ public abstract class UserCommonDao implements IUserDao {
         logger.info("☆☆☆ 新增用户SQL = {}", execSQL);
         try {
             this.dao.insert(execSQL, userBean);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             throw new DBException(e, ExceptionCode.DB_INSERT_ERROR);
         }
     }
@@ -165,7 +166,7 @@ public abstract class UserCommonDao implements IUserDao {
         logger.info("☆☆☆ 修改用户SQL = {}", execSQL);
         try {
             this.dao.update(execSQL, userBean);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             throw new DBException(e, ExceptionCode.DB_UPDATE_ERROR);
         }
     }
@@ -174,13 +175,15 @@ public abstract class UserCommonDao implements IUserDao {
     public void deleteUser(List<UserBean> userBeanList) {
         StringBuffer sb = new StringBuffer();
         sb.append("delete from sm2_user where user_id = :userId");
+
         String execSQL = StringUtils.replacePattern(sb.toString(), "\\s+", " ");
         String jsonStr = JSON.toJSONString(userBeanList, true);
         logger.info("☆☆☆ 删除用户请求参数 = {}", jsonStr);
         logger.info("☆☆☆ 删除用户SQL = {}", execSQL);
+
         try {
             this.dao.insertAll(sb.toString(), userBeanList);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             throw new DBException(e, ExceptionCode.DB_DELETE_ERROR);
         }
     }

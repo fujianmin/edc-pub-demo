@@ -3,8 +3,6 @@ package com.newland.edc.pub.demo.user.api;
 import com.newland.bd.ms.core.model.RespInfo;
 import com.newland.edc.pub.demo.user.model.UserBean;
 import com.newland.edc.pub.demo.user.service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
@@ -24,8 +22,6 @@ import java.util.List;
 @RestController
 @RequestMapping("${cmcc.web.servlet-path}/user")
 public class UserController {
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-
     @Autowired
     private UserService userService;
 
