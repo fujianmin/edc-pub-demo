@@ -28,7 +28,7 @@
         <flyway.version>4.2.0</flyway.version>
         <org.jmockit>1.36</org.jmockit>
         <junit.version>4.12</junit.version>
-        <mysql.version>5.1.45</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <oracle.version>11.2.0.4.0</oracle.version>
         <druid.version>1.1.10</druid.version>
     </properties>
