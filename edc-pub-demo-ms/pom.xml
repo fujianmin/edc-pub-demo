@@ -22,7 +22,7 @@
         <fastjson.version>1.2.56</fastjson.version>
         <apache.commons.lang3>3.4</apache.commons.lang3>
         <apache.commons.collection>3.2.2</apache.commons.collection>
-        <commons.io>2.5</commons.io>
+        <commons.io>2.7</commons.io>
         <commons.net>3.1</commons.net>
 
         <flyway.version>4.2.0</flyway.version>
